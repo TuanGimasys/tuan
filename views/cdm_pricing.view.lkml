@@ -1,6 +1,6 @@
 view: cdm_pricing {
   label: "Pricing Optimization"
-  sql_table_name: `leigha-bq-dev.retail.CDM_Pricing` ;;
+  sql_table_name: `gms-rd-smartanalytics2.Pricing_CDM_2.CDM_Pricing` ;;
 
   dimension: cash_discounts_and_other_sales_deductions {
     type: number

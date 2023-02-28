@@ -18,5 +18,17 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
-explore: price_changes {}
-explore: cdm_pricing {}
+explore: cdm_pricing {
+  label: "Pricing Optimization"
+}
+
+explore: price_changes {
+  label: "Price Changes"
+}
+
+explore: forecasting {
+  join: pricing {
+    relationship: many_to_one
+    sql_on: ${forecasting.product_id} = ${pricing.product_id} ;;
+  }
+}
