@@ -19,3 +19,4 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #   }
 # }
 explore: price_changes {}
+explore: cdm_pricing {}
