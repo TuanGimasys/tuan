@@ -1,4 +1,4 @@
-connection: "smart_analytics2"
+connection: "nttuan_dataflow_test"
 
 include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 # include: "/**/*.view.lkml"                 # include all views in this project
@@ -18,17 +18,6 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
-explore: cdm_pricing {
-  label: "Pricing Optimization"
-}
-
-explore: price_changes {
-  label: "Price Changes"
-}
-
-explore: forecasting {
-  join: pricing {
-    relationship: many_to_one
-    sql_on: ${forecasting.product_id} = ${pricing.product_id} ;;
-  }
+explore: location {
+  label: "Location"
 }
